@@ -5,20 +5,62 @@
     text-align: left;
     padding-left: 2em;
 }
-
+.content {
+    padding-left: 3em;
+    width: 100%;
+}
+.dashboard-comp:hover {
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+  }
 .dashboard-comp {
-    height: 10em;
-    box-shadow: 10px 10px 5px #aaaaaa;
-    /*border-radius: 4em;*/
+    height: 12em;
+    box-shadow: 10px 10px 100px #aaaaaa;
     cursor: pointer;
-    padding: 0;
+    padding: 2em;
+    border-radius: 20px;
+    transition: transform 1s;
+}
+
+.dashboard-image{
     
 }
 .vacation-comp{
-    background:  url(../../images/Vacation.jpg);
+    background:  url(../../images/calendar1.png);
     height: 7.5em;
     background-repeat: no-repeat;
-    background-size: 462px 250px;
+    background-size: 170px 150px;    
+}
+.planning-comp{
+    background:  url(../../images/planning1.png);
+    height: 7.5em;
+    background-repeat: no-repeat;
+    background-size: 170px 150px; 
+}
+.notes-comp{
+    background:  url(../../images/notes1.png);
+    height: 7.5em;
+    background-repeat: no-repeat;
+    background-size: 170px 150px;   
+}
+.leads-comp{
+    background:  url(../../images/leads.png);
+    height: 7.5em;
+    background-repeat: no-repeat;
+    background-size: 170px 150px;   
+}
+.reports-comp{
+    background:  url(../../images/reports.png);
+    height: 7.5em;
+    background-repeat: no-repeat;
+    background-size: 170px 150px;   
+}
+.employee-comp{
+    background:  url(../../images/employee.png);
+    height: 7.5em;
+    background-repeat: no-repeat;
+    background-size: 170px 150px;   
 }
 .vacation-quote{
     font-size: 17px;
