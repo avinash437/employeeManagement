@@ -1,41 +1,26 @@
 <br />
 <div class="content">
-  <div>Kafka Dragons - Scrum team</div>
+  <div class="teamname">{{scrumTeam}}</div>
   <br />
   <div>
+    <div id="planningContainer" style="height: 300px; width: 100%;"></div>
 
-    <div class="teamInfo">
-      <!-- <ul class="header">
-        <div class="row">
-          <div class="col-3">Sprint Number </div>
-          <div class="col-3">Start Date </div>
-          <div class="col-3">End Date </div>
-          <div class="col-3">Capacity</div>
-        </div>
-
-      </ul>-->
-
-      <ul >
-
+    <!--<div class="teamInfo">
+      <ul>
         <li *ngFor="let planning of planning; index as index">
-          
           <div id={{index}} class="planningdetails">
-
             <ul class="no-border">
               <li class="no-border">
                 <div class="row">
-
                   <app-calendar-cell [planning]=planning></app-calendar-cell>
-
                 </div>
               </li>
             </ul>
-
           </div>
         </li>
 
       </ul>
-    </div>
+    </div>-->
 
   </div>
 </div>

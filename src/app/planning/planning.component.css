@@ -19,7 +19,12 @@
   -o-transition: visibility 0s 2s, opacity 2s linear;
   transition: visibility 0s 2s, opacity 2s linear;
 }
-
+.teamname{
+  padding-left: 1em;
+  color: #337ab7;
+  text-decoration: underline;
+  font-weight: bold;
+}
 li{
   font-size: 19px;
   color:#aaaaaa;

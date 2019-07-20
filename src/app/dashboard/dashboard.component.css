@@ -5,3 +5,24 @@
     text-align: left;
     padding-left: 2em;
 }
+
+.dashboard-comp {
+    height: 10em;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    /*border-radius: 4em;*/
+    cursor: pointer;
+    padding: 0;
+    
+}
+.vacation-comp{
+    background:  url(../../images/Vacation.jpg);
+    height: 7.5em;
+    background-repeat: no-repeat;
+    background-size: 462px 250px;
+}
+.vacation-quote{
+    font-size: 17px;
+    font-style: italic;
+    font-weight: bold;
+    color: #337ab7;
+}

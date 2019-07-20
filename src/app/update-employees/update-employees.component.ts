@@ -20,7 +20,9 @@ import { LeadModel } from '../lead/leadModel';
 export class UpdateEmployeesComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private addVacationModel: updateEmployeeModel,
-    private router: Router, public dataStateStore: DataStateStore, public activatedRoute: ActivatedRoute, private modalService: ModalService, private leadModel: LeadModel) { }
+    private router: Router, public dataStateStore: DataStateStore, public activatedRoute: ActivatedRoute, private modalService: ModalService, private leadModel: LeadModel) {
+      this.getLeadsData();
+     }
   registerForm: FormGroup;
   submitted = false;
   leads = [];

@@ -42,10 +42,10 @@ export class EmployeeNotesComponent implements OnInit {
           return;
       }
       const note = new employeeNote();
-      note.username = this.registerForm.value.name;
+      note.name = this.registerForm.value.name;
       note.note = this.registerForm.value.note;
       note.time = this.registerForm.value.time;
-      this.employeeNotesModel.postNotes('/employee/add/notes',note, 'Failed to add notes ..!!');
+      this.employeeNotesModel.postNotes('/notes/add',note, 'Failed to add notes ..!!');
       this.router.navigateByUrl('/dashboard');  
      
     }

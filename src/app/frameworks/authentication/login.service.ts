@@ -21,6 +21,8 @@ export class LoginService implements CanActivate {
         }else {
             let element = document.getElementById('mainController');
             element.style.display = 'block';
+            element = document.getElementById('headerMenu');
+            element.style.display = 'block';
         }
        return true;
     }

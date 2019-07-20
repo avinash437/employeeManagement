@@ -37,8 +37,10 @@
               <br />
               <div class="row form-group">
                 <div class="col-2"><label>Manager: </label></div>
-                <div class="col-6"> 
-                    <app-autocomplete></app-autocomplete>
+                <div class="col-6">
+                  <select ng-model="selectedCar" >
+                         <option *ngFor="let lead of leads; index as index" value="lead.value">{{lead.display}}</option>
+                  </select>
                   <!--<input type="text" formControlName="manager" class="form-control"
                     value="{{employee.manager}}" [ngClass]="{ 'is-invalid': submitted && f.manager.errors }" />-->
                   <div *ngIf="submitted && f.manager.errors" class="invalid-feedback">

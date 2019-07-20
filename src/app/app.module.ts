@@ -31,7 +31,7 @@ import { ViewEmployeesComponent } from './view-employees/view-employees.componen
 import { AddEmployeesComponent } from './add-employees/add-employees.component';
 import { UpdateEmployeesComponent } from './update-employees/update-employees.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
-import { MatAutocompleteModule, MatInputModule } from '@angular/material';
+//import { MatAutocompleteModule, MatInputModule } from '@angular/material';
 import { CalendarCellComponent } from './calendar-cell/calendar-cell.component';
 import { TodoComponent } from './todo/todo.component';
 
@@ -43,9 +43,9 @@ import { TodoComponent } from './todo/todo.component';
         HttpClientModule,
         ReactiveFormsModule,
         CommonModule,
-        BrowserAnimationsModule,
+        BrowserAnimationsModule/*,
         MatAutocompleteModule,
-        MatInputModule
+        MatInputModule*/
     ],
     declarations: [
         AppComponent,

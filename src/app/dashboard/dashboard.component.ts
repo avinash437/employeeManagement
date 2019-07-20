@@ -21,9 +21,11 @@ export class DashboardComponent implements OnInit {
     selectedEmployee: Employee;
 
     ngOnInit() {
-        this.employeeModel.getEmployees('/employees');
+        //this.employeeModel.getEmployees('/employees');
     }
-
+    navigateTo(page){
+        this.router.navigateByUrl(page);
+    }
     getTeamInformation(): void {
 
     }
