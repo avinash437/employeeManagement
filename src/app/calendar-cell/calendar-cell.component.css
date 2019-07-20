@@ -1,0 +1,105 @@
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity 2s linear;
+    -moz-transition: opacity 2s linear;
+    -o-transition: opacity 2s linear;
+    transition: opacity 2s linear;
+  }
+
+  .planningdetails{
+    background-color: white;
+  }
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: visibility 0s 2s, opacity 2s linear;
+    -moz-transition: visibility 0s 2s, opacity 2s linear;
+    -o-transition: visibility 0s 2s, opacity 2s linear;
+    transition: visibility 0s 2s, opacity 2s linear;
+  }
+
+  li{
+    font-size: 19px;
+    color:#aaaaaa;
+    list-style: none;
+  }
+  ul{
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 0;
+      padding: 0.23em;
+      }
+
+  li:hover {
+    cursor: pointer;
+    list-style: none;
+    /*background-color: #ddd;*/
+  }
+
+  .header {
+    list-style: none;
+    border-bottom: 2px solid #dee2e6;
+    border-top: 2px solid #dee2e6;
+    color: #333333;
+    font-weight: bold;
+    font-size: 19px;
+  }
+.content{
+  width: 100% !important;
+}
+.cal-cell1 {
+  background-color: #ff6666;
+  height: 4em;
+  border: 1px solid #dee2e6;
+  padding: 4px;    
+  min-width: 5.2em;
+  color: white;
+}
+  .cal-cell {
+    background-color: #ff6666;
+    height: 4em;
+    border: 1px solid #dee2e6;
+    padding: 4px;    
+    min-width: 3.6em;
+    color: white;
+  }
+  .vacation{
+    background-color: grey;
+    cursor: pointer;
+  }
+  
+  .capacity{    
+    min-width: 3.7em;
+  }
+  .novacation{
+    background-color: #53c7a4;
+  }
+  .rightAlign{
+    float: right;
+    padding-left: 54%;
+    font-size: 13px;
+  }
+.centerAlign{
+  float: none;
+    padding-left: 37%;
+    font-size: 20px;
+}
+  td{
+    padding:0;
+  }
+  .no-border{
+    border: none;
+  }
+
+  .cal-name{
+    font-size: 10px;
+    margin-left: 15px;
+}
+.capacityDiv{
+  padding-left: 17px;
+    font-size: 16px;
+}
+.sprintDiv{
+margin-top: 25%;
+}

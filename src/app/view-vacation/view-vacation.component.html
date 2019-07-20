@@ -1,0 +1,25 @@
+<br /><br />
+
+
+<div class="content">
+
+        <div class="vacationTemplate">
+                <ul class="nav nav-pills">
+                    <li role="presentation"><a routerLink="/addVacation" routerLinkActive="active">Add</a></li>
+                    <li role="presentation"><a routerLink="/viewVacation" routerLinkActive="active">View</a></li>
+                </ul>
+        
+            </div>
+    <div>
+        <div *ngFor="let vacationResponse of viewVacationModel.vacationResponse" class="vacc_container">
+            <div class="moth_div">{{vacationResponse.month}}</div>
+            <ul *ngFor="let vacationList of vacationResponse.vacationList">
+                <li>{{vacationList.name}}</li>
+                <label> From: </label> {{vacationList.from}} <label> To: </label> {{vacationList.to}}
+                
+            </ul>
+        </div>
+
+    </div>
+    
+</div>

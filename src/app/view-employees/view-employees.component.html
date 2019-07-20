@@ -1,0 +1,42 @@
+<br /><br />
+<div class="content">
+    <div class="vacationTemplate">
+        <ul class="nav nav-pills">
+            <li role="presentation"><a routerLink="/addEmployee" routerLinkActive="active">Add</a></li>
+            <li role="presentation"><a routerLink="/viewEmployee" routerLinkActive="active">View</a></li>
+        </ul>
+
+    </div>
+    <div>
+
+        <div>
+
+            <div class="teamInfo">
+
+                <table class="table table-hover">
+                    <thead>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Username</th>
+                        <th>Project</th>
+                        <th>Manager</th>
+                        <th>Experience</th>
+                        <th>Contact</th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let employee of employeeModel.employee">
+                            <!-- <td (click)="loadProfile($event,employee)" >{{employee.Name}}</td> -->
+                            <td><a routerLink="/profile" (click)="updateEmployee($event, employee)" routerLinkActive="active">{{employee.name}}</a></td>
+                            <td>{{employee.email}}</td>
+                            <td>{{employee.username}}</td>
+                            <td>{{employee.project}}</td>
+                            <td>{{employee.manager}}</td>
+                            <td>{{employee.experience}}</td>
+                            <td>{{employee.contact}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

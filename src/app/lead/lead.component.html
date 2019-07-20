@@ -1,0 +1,22 @@
+<div>
+  <br />
+  <br />
+  <div class="teamInfo">
+
+      <table class="table table-hover">
+          <thead>
+              <th>Name</th>
+              <th>Project</th>
+              <th>Manager</th>
+          </thead>
+          <tbody>
+              <tr *ngFor="let lead of leads">
+                  <!-- <td (click)="loadProfile($event,employee)" >{{employee.Name}}</td> -->
+                  <td><a routerLink="/profile" (click)="loadProfile($event, lead)" routerLinkActive="active">{{lead.name}}</a></td>
+                  <td>{{lead.project}}</td>
+                  <td>{{lead.manager}}</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>

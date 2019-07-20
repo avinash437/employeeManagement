@@ -1,0 +1,10 @@
+.mat-form-field-appearance-legacy .mat-form-field-infix .mat-form-field-wrapper{
+    padding: 0 !important;
+}
+
+.jumbotron{
+    background-color: white;
+    color: #919191;
+    font-size: 17px;
+    font-weight: bold;
+}

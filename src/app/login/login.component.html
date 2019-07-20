@@ -1,0 +1,45 @@
+<!-- LOGIN FORM -->
+
+<div class="login-form-container">
+<div class="text-center" style="padding:50px 0">
+    <div class="logo">login</div>
+    <!-- Main Form -->
+    <div class="login-form-1">
+      <form  [formGroup]="registerForm"  id="login-form" class="text-left"  (ngSubmit)="onSubmit()">
+        <div class="login-form-main-message"></div>
+        <div class="main-login-form">
+          <div class="login-group">
+            <div class="form-group">
+              <label for="lg_username" class="sr-only">Username</label>
+              <input type="text" formControlName="username"  class="form-control" id="lg_username" name="lg_username"
+                [ngClass]="{ 'is-invalid': submitted && f.username.errors }" 
+               placeholder="username">
+              <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                  <div *ngIf="f.username.errors.required">This is required field</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="lg_password" class="sr-only">Password</label>
+              <input type="password" formControlName="password"  class="form-control" id="lg_password" 
+              name="lg_password" placeholder="password"  [ngClass]="{ 'is-invalid': submitted && f.password.errors }" >
+
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                  <div *ngIf="f.password.errors.required">This is required field</div>
+              </div>
+            </div>
+            <div class="form-group login-group-checkbox">
+              <input type="checkbox" id="lg_remember" name="lg_remember">
+              <label for="lg_remember">remember</label>
+            </div>
+          </div>
+          <button  class="login-button"><i class=" icon_avinash fa fa-chevron-right"></i></button>
+        </div>
+        <div class="etc-login-form">
+          <p>forgot your password? <a href="#">click here</a></p>
+          <p>new user? <a href="#">create new account</a></p>
+        </div>
+      </form>
+    </div>
+    <!-- end:Main Form -->
+  </div>
+</div>

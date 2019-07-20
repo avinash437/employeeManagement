@@ -1,0 +1,31 @@
+.headerMenu{
+    font-size: 13px;
+    height: 2em;
+    color: #0088ce;
+}
+
+.mainMenu {
+
+}
+.nav-pills>li>a {
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.navi{
+    background-color: #0088ce;
+    color: white !important;
+}
+
+.active {
+    color: #fff;
+    background-color: #337ab7;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    color: #fff;
+    background-color: #337ab7;
+}
+.mainController {
+    padding-left: 2em;
+}
