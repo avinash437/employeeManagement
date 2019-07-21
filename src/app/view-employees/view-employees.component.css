@@ -4,7 +4,10 @@
     font-size : 17px;
     text-align: left;
 }
-
+.content {
+    padding-left: 2em;
+    width: 80%;
+}
 td{
     width: 0%;
     font-size: 15px;

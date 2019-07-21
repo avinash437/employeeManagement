@@ -52,14 +52,14 @@ export class ReportsComponent implements OnInit {
         dataPoints: [
 			{ y: 5, label: 'January' },
 			{ y: 1, label: 'Februray' },
-			{ y: 2, label: 'March' , indexLabel: "highest",markerColor: "red", markerType: "triangle" },
+			{ y: 9, label: 'March', indexLabel: "highest",markerColor: "red", markerType: "triangle" },
 			{ y: 6, label: 'April'  },
 			{ y: 5 , label: 'May' },
-			{ y: 0, label: 'June'  },
+			{ y: 0, label: 'June'   , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross"  },
 			{ y: 8, label: 'July'  },
 			{ y: 8, label: 'August'  },
-			{ y: 1, label: 'September'  , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
-			{ y: 0, label: 'October'  },
+			{ y: 1, label: 'September'},
+			{ y: 4, label: 'October'  },
 			{ y: 8, label: 'November'  },
 			{ y: 1, label: 'December'  }
 		]

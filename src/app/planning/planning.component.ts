@@ -125,7 +125,7 @@ export class PlanningComponent implements OnInit {
     return day + ' ' + monthNames[monthIndex] + ' ' + year;
   }
   getNames(planning) {
-    let response = '<div class=\'teamname\' >';
+    let response = '<div >';
     if (planning.vacationlist.length >0 ) {
         planning.vacationlist.forEach(vacation => {         
           response += vacation.name+ ' is on vacation from <br />' + this.formatDate(vacation.from) +' - '+ this.formatDate(vacation.to) ;
