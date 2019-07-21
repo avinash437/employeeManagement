@@ -34,6 +34,7 @@ import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 //import { MatAutocompleteModule, MatInputModule } from '@angular/material';
 import { CalendarCellComponent } from './calendar-cell/calendar-cell.component';
 import { TodoComponent } from './todo/todo.component';
+import { ReportsComponent } from './reports/reports.component';
 
 @NgModule({
     imports: [
@@ -69,7 +70,8 @@ import { TodoComponent } from './todo/todo.component';
         UpdateEmployeesComponent,
         AutocompleteComponent,
         CalendarCellComponent,
-        TodoComponent
+        TodoComponent,
+        ReportsComponent
     ],
     providers: [DataStateStore, UserService],
     bootstrap: [AppComponent]

@@ -3,7 +3,36 @@
     max-width: 500px;
     width: 100%;
   }
-  
+  .nav>li>a{
+    padding-right: 1em;
+    padding-left: 2px ;
+  }
+  .nav>li>a:hover{
+  background-color: #337ab7;
+  color: white;
+  }
+
+  a{
+    text-decoration: none;
+  }
   .example-full-width {
     width: 100%;
   }
+  .content {
+    padding-left: 2em;
+    width: 80%;
+}
+.addicon{
+  background:  url(../../images/add.png);
+  height: 2em;
+  background-repeat: no-repeat;
+  background-size: 46px 35px;
+  cursor: pointer;
+}
+.removeicon{
+  background:  url(../../images/remove.png);
+  height: 2em;
+  background-repeat: no-repeat;
+  background-size: 46px 35px;
+  cursor: pointer;
+}

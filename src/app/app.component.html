@@ -2,18 +2,18 @@
 <div ng-app="headerMenu">
    <div ng-controller="mainController" class="mainController" id="mainController">
        
-    <!--<div>
-            <ul class="nav nav-pills">
-                <li role="presentation"><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
-                <li role="presentation"><a routerLink="/vacations" routerLinkActive="active">Vacations</a></li>
-                <li role="presentation" [hidden]="!isLead"><a routerLink="/planning" routerLinkActive="active">Planning</a></li>
-                <li role="presentation"><a routerLink="/notes" routerLinkActive="active">Notes</a></li>
-                <li role="presentation"[hidden]="!isLead"><a routerLink="/leads" routerLinkActive="active">Leads</a></li>
-                <li role="presentation"[hidden]="!isLead"><a routerLink="/employees" routerLinkActive="active">Employees</a></li>
-                <li role="presentation"><a routerLink="/profile" routerLinkActive="active">Profile</a></li>
-
-            </ul>
-        </div>-->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/vacations">Vacation Management</a>
+        <a href="/planning">Planning</a>
+        <a href="/notes">Notes</a>
+        <a href="/employees">Employee Management</a>
+        <a href="/reports">Reports</a>
+        <a href="/leads">Leads Section</a>
+      </div>
+      
+      
         <div id="main">
 
             <!-- angular templating -->

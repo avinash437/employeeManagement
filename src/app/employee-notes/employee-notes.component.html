@@ -1,54 +1,64 @@
-<br /><br />
 
 <div class="content">
 
-    <div>
-        <div class="">
+        <div class="teamname">Notes Section</div>
+<br />
+<div>
+<div class="">
 
-            <div class="row">
-                <div class="container">
-                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-                        <div class="row form-group">
-                            <div class="col-2"><label>Name</label></div>
-                            <div class="col-6"><input type="text" formControlName="name" class="form-control"
-                                    [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
-                                <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
-                                    <div *ngIf="f.name.errors.required">This is required field</div>
-                                </div>
-                            </div>
-                        </div>
-                        <br />
-                        <div class="row form-group">
-                            <div class="col-2"><label>Notes: </label></div>
-                            <div class="col-6"><input type="text" formControlName="note" class="form-control"
-                                    [ngClass]="{ 'is-invalid': submitted && f.note.errors }" />
-                                <div *ngIf="submitted && f.note.errors" class="invalid-feedback">
-                                    <div *ngIf="f.note.errors.required">This is required field</div>
-                                </div>
-                            </div>
-                        </div>
-                        <br />
-                        <div class="row form-group">
-                            <div class="col-2"><label>Time: </label></div>
-                            <div class="col-6"><input type="date" formControlName="time" class="form-control"
-                                    [ngClass]="{ 'is-invalid': submitted && f.time.errors }" />
-                                <div *ngIf="submitted && f.time.errors" class="invalid-feedback">
-                                    <div *ngIf="f.time.errors.required">This is required field</div>
-                                </div>
-                            </div>
-                        </div>
-                        <br />
-                        <div class="row">
-                            <div class="col-8"><button class="custombtn ">Submit</button></div>
-                        </div>
-                    </form>
+    <div class="row">
+        <div class="col-md-8">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="row form-group">
+                    <div class="col-2"><label>Name</label></div>
+                    <div class="col-6">
+                           <select id="selectedEmployee" class="form-control"  ng-model="selectedEmployee">
+                            <option *ngFor="let employee of employeeModel.employee; index as index"
+                            value="{{employee.username}}">{{employee.name}}</option>
+                        </select>
+                    </div>
                 </div>
-
-            </div>
+                <br />
+                <div class="row form-group">
+                    <div class="col-2"><label>Notes: </label></div>
+                    <div class="col-6"><input type="text" formControlName="note" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.note.errors }" />
+                        <div *ngIf="submitted && f.note.errors" class="invalid-feedback">
+                            <div *ngIf="f.note.errors.required">This is required field</div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row form-group">
+                    <div class="col-2"><label>Type: </label></div>
+                    <div class="col-6">
+                            <div class="row ">
+                            <div class="col-6"><input checked type="radio" id="type1" name="type" value="positive"> Positive </div>
+                            <div class="col-6"><input type="radio" id="type2" name="type" value="improvement"> Improvement </div>
+                            </div>
+                            
+                    </div>
+                </div>
+                <br />
+                <div class="row form-group">
+                    <div class="col-2"><label>Time: </label></div>
+                    <div class="col-6"><input type="date" formControlName="time" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.time.errors }" />
+                        <div *ngIf="submitted && f.time.errors" class="invalid-feedback">
+                            <div *ngIf="f.time.errors.required">This is required field</div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-8"><button class="custombtn ">Add</button></div>
+                </div>
+            </form>
         </div>
-        <div>
+
+    </div>
+</div>
+<div>
 
         </div>
     </div>
-
-    <!-- <app-datepicker #dp  (navigate)="date = $event.next"></app-datepicker> -->

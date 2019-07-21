@@ -38,7 +38,7 @@
               <div class="row form-group">
                 <div class="col-2"><label>Manager: </label></div>
                 <div class="col-6">
-                  <select ng-model="selectedCar" >
+                  <select class="form-control" ng-model="selectedCar" >
                          <option *ngFor="let lead of leads; index as index" value="lead.value">{{lead.display}}</option>
                   </select>
                   <!--<input type="text" formControlName="manager" class="form-control"

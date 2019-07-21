@@ -1,59 +1,71 @@
-<br /><br />
-
 <div class="content">
-    <div class="vacationTemplate">
-        <ul class="nav nav-pills">
-            <li role="presentation"><a routerLink="/addVacation" routerLinkActive="active">Add</a></li>
-            <li role="presentation"><a routerLink="/viewVacation" routerLinkActive="active">View</a></li>
-        </ul>
 
-    </div>
-<div>
+    <div class="row">
+        <div class="col-3">
+            <div class="teamname">Vacation Management</div>
+        </div>
+        <div class="col-1">
+            <a routerLink="/addVacation" routerLinkActive="active">Add</a>
+        </div>
+        <div class="col-1">
+            <a routerLink="/viewVacation" routerLinkActive="active">View</a>
+        </div>
+        <br />
+    </div> <br />
+    <div>
 
- <div >
-<div class="">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-                        <div class="form-group">
-                            <label>Name</label>
-                            <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
-                            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
-                                <div *ngIf="f.name.errors.required">This is required field</div>
-                            </div>
+        <div>
+            <div class="">
+                <div class="">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                                <div class="row form-group">
+                                    <div class="col-2"><label>Name</label></div>
+                                    <div class="col-6"><input type="text" formControlName="name" class="form-control"
+                                            [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                                        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                            <div *ngIf="f.name.errors.required">This is required field</div>
+                                        </div>
+                                    </div>
+                                </div><br />
+                                <div class="row form-group">
+                                    <div class="col-2"><label>Reason</label></div>
+                                    <div class="col-6"><input type="text" formControlName="reason" class="form-control"
+                                            [ngClass]="{ 'is-invalid': submitted && f.reason.errors }" />
+                                        <div *ngIf="submitted && f.reason.errors" class="invalid-feedback">
+                                            <div *ngIf="f.reason.errors.required">This is required field</div>
+                                        </div>
+                                    </div>
+                                </div><br />
+                                <div class="row form-group">
+                                    <div class="col-2"><label>From: </label></div>
+                                    <div class="col-6"><input type="date" formControlName="from" class="form-control"
+                                            [ngClass]="{ 'is-invalid': submitted && f.from.errors }" />
+                                        <div *ngIf="submitted && f.from.errors" class="invalid-feedback">
+                                            <div *ngIf="f.from.errors.required">This is required field</div>
+                                        </div>
+                                    </div>
+                                </div><br />
+                                <div class="row form-group">
+                                    <div class="col-2"><label>To: </label></div>
+                                    <div class="col-6"><input type="date" formControlName="to" class="form-control"
+                                            [ngClass]="{ 'is-invalid': submitted && f.to.errors }" />
+                                        <div *ngIf="submitted && f.to.errors" class="invalid-feedback">
+                                            <div *ngIf="f.to.errors.required">This is required field</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br /><br />
+                                <div class="row form-group">
+                                    <div class="col-8"><button class="custombtn ">Add</button></div>
+                                </div>
+                            </form>
                         </div>
-                        <div class="form-group">
-                            <label>Reason</label>
-                            <input type="text" formControlName="reason" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.reason.errors }" />
-                            <div *ngIf="submitted && f.reason.errors" class="invalid-feedback">
-                                <div *ngIf="f.reason.errors.required">This is required field</div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>From: </label>
-                            <input type="date" formControlName="from" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.from.errors }" />
-                            <div *ngIf="submitted && f.from.errors" class="invalid-feedback">
-                                <div *ngIf="f.from.errors.required">This is required field</div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>To: </label>
-                            <input type="date" formControlName="to" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.to.errors }" />
-                            <div *ngIf="submitted && f.to.errors" class="invalid-feedback">
-                                <div *ngIf="f.to.errors.required">This is required field</div>
-                            </div>
-                        </div>
-                        <br />
-                        <div class="form-group">
-                            <button class="custombtn ">Submit</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
     </div>
 </div>
 

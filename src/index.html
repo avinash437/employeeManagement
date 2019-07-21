@@ -32,23 +32,36 @@
     });
 
     
+function showLeftMenu() {
+  document.getElementById("mySidebar").style.width = "200px";
+  document.getElementById("main").style.marginLeft = "200px";
+}
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
   </script>
 </head>
 
 <body>
-    <div class="headerMenu" id="headerMenu">
-        <div class="row">
-            <div class="col-md-8 app-name">Scrum Team Management</div>
-            <div class="col-md-1 header-div"><a style="color: white" href="/dashboard"><i class="fa fa-home"></i> <span class="header-icon glyphicon glyphicon-home">
-                    </span>Home</a></div>
-            <div class="col-md-1 header-div"><a style="color: white" href="#"><i class="fa fa-home"></i> <span class="header-icon glyphicon glyphicon-user">
-                    </span>About</a></div>
-            <div class="col-md-1 header-div"><a style="color: white" href="#"><i class="fa fa-home"></i><span
-                        class="header-icon glyphicon glyphicon-envelope"> </span> Contact</a></div>
-            <div class="col-md-1 header-div"><a style="color: white" href="/login"><i class="fa fa-home"></i><span
-                        class="header-icon glyphicon glyphicon-log-out"> </span> Logout</a></div>
-        </div>
+  <div >
+  <div class="headerMenu" id="headerMenu">
+    <div class="row">
+      <div class="col-sm-8 app-name">
+        <div onclick="showLeftMenu()" class="col-sm-1 app-headericon"></div>Scrum Team Management
+      </div>
+      <div class="col-sm-1 header-div"><a style="color: white" href="/dashboard"><i class="fa fa-home"></i> <span
+            class="header-icon glyphicon glyphicon-home">
+          </span>Home</a></div>
+      <div class="col-sm-1 header-div"><a style="color: white" href="#"><i class="fa fa-home"></i> <span
+            class="header-icon glyphicon glyphicon-user">
+          </span>About</a></div>
+      <div class="col-sm-1 header-div"><a style="color: white" href="#"><i class="fa fa-home"></i><span
+            class="header-icon glyphicon glyphicon-envelope"> </span> Contact</a></div>
+      <div class="col-sm-1 header-div"><a style="color: white" href="/login"><i class="fa fa-home"></i><span
+            class="header-icon glyphicon glyphicon-log-out"> </span> Logout</a></div>
     </div>
+  </div>
   <div class="body-container">
     <jw-modal id="custom-modal" ng-reflect-id="custom-modal" style="display: none">
       <div class="jw-modal">
@@ -72,7 +85,7 @@
     </jw-modal>
 
     <app-root></app-root>
-
+</div>
   </div>
 </body>
 

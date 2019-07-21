@@ -16,6 +16,7 @@ import { EmployeesComponent } from './employees/employees.component';
 import { ViewEmployeesComponent } from './view-employees/view-employees.component';
 import { AddEmployeesComponent } from './add-employees/add-employees.component';
 import { UpdateEmployeesComponent } from './update-employees/update-employees.component';
+import {ReportsComponent} from './reports/reports.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,7 @@ const routes: Routes = [
     { path: 'addEmployee', component: AddEmployeesComponent, canActivate:[LoginService,UserService]},
     { path: 'viewEmployee', component: ViewEmployeesComponent, canActivate:[LoginService,UserService]},
     { path: 'updateEmployee', component: UpdateEmployeesComponent, canActivate:[LoginService,UserService]},
+    { path: 'reports', component: ReportsComponent, canActivate:[LoginService,UserService]},
     { path: 'login', component: LoginComponent},
 ];
 

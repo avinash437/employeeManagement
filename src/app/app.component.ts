@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { slideInAnimation } from './frameworks/utility/route-animation';
+import { slideInAnimation } from './frameworks/utility/animations/fade-in-animation';
 
 import { UserService } from './frameworks/authentication/user.service';
 import './modal.less';

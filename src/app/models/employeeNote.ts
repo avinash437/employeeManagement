@@ -1,5 +1,6 @@
 export class employeeNote {
     note: string;
     time: string;
-    name: string;
+    username: string;
+    type: string;
 }

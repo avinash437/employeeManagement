@@ -15,7 +15,7 @@ export class ModalService {
             let element = document.getElementById('custom-modal');
             element.style.display = 'none';
             document.body.classList.remove('jw-modal-open');
-        }, 1500);
+        }, 150);
     }
     openModal(failMessgae): void {
         let that = this;
@@ -39,6 +39,6 @@ export class ModalService {
             element.style.display = 'none';
             document.body.classList.remove('jw-modal-open');
 
-        }, 1500);
+        }, 150);
     }
 }

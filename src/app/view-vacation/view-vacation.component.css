@@ -5,17 +5,21 @@
     text-align: left;
     padding-left: 2em;
 }
-
+.content {
+    width: 80%;
+}
 .month_ul{
     list-style: none;
     background-color: #337ab7;
 }
-
+a{
+    text-decoration: none;
+  }
 .vacationTemplate{
     width: 100%;
 }
 .moth_div{
-    background-color: #337ab7;
+    background-image: linear-gradient(to right top, #514a9d, #2a6cbb, #008ccf, #00aad9, #24c6dc);
     color: white;
     font-family: bold;
     padding-left: 1em;
