@@ -40,9 +40,10 @@ export class EmployeeNotesComponent implements OnInit {
     return this.registerForm.controls;
   }
   onSubmit() {
-    var element = document.getElementById('selectedEmployee');
+    var element = document.getElementById('selectedEmployee') as HTMLSelectElement;
+    var radioButton = document.getElementById('type2') as HTMLInputElement;
     let noteType = 'positive';
-    if(document.getElementById('type2').checked){
+    if(radioButton.checked){
       noteType = 'improvement';
     }
     this.submitted = true;

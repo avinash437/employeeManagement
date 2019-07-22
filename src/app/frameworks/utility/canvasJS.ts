@@ -18,24 +18,24 @@ import { RestModelComponent } from './../Model/RestModel.component';
 export class CanjasJSComponent implements OnInit {
     canvasJS;
     constructor(private restModelComponent: RestModelComponent) {
-        this.restModelComponent.get("http://canvasjs.com/assets/script/canvasjs.min.js").subscribe(res => {
-            console.log(res);
-            this.canvasJS = res;
-        });
+        
     }
     ngOnInit(): void {
         
     }
-    getcanvasJS() {
-        if (this.canvasJS) {
-            return this.canvasJS;
-        } else {
-            this.restModelComponent.get("http://canvasjs.com/assets/script/canvasjs.min.js").subscribe(res => {
-                console.log(res);
-                this.canvasJS = res;
-            });
-        }
-        return this.canvasJS;
+    getcanvasJS(title, data, elementRef) {
+        return new CanvasJS.Chart(elementRef, {
+            animationEnabled: true,
+            data: [{
+              type: "area",
+              axisY: {
+                title: title,
+                includeZero: false
+              },
+              dataPoints: data
+            }]
+          });
+        
     }
 
 }

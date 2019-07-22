@@ -22,11 +22,11 @@
                             <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                                 <div class="row form-group">
                                     <div class="col-2"><label>Name</label></div>
-                                    <div class="col-6"><input type="text" formControlName="name" class="form-control"
-                                            [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
-                                        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
-                                            <div *ngIf="f.name.errors.required">This is required field</div>
-                                        </div>
+                                    <div class="col-6">
+                                            <select id="selectedEmployee" class="form-control"  ng-model="selectedEmployee">
+                                                    <option *ngFor="let employee of employeeModel.employee; index as index"
+                                                    value="{{employee.username}}">{{employee.name}}</option>
+                                                </select>
                                     </div>
                                 </div><br />
                                 <div class="row form-group">

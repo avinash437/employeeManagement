@@ -13,8 +13,7 @@ export class ReportsComponent implements OnInit {
     this.renderVacationChart();
     this.renderPerformanceChart();
   }
-  renderPerformanceChart() { 
-
+  renderPerformanceChart() {
     var chart = new CanvasJS.Chart("performanceContainer", {
       animationEnabled: true,
       data: [{
@@ -26,16 +25,16 @@ export class ReportsComponent implements OnInit {
         dataPoints: [
           { y: 70, label: 'Fernando West' },
           { y: 80, label: 'Helen Wade' },
-          { y: 100, label: 'Patsy Lane'},
-          { y: 95, label: 'Tyler Campbell'  },
-          { y: 78 , label: 'Mabel Kim' }
+          { y: 100, label: 'Patsy Lane' },
+          { y: 95, label: 'Tyler Campbell' },
+          { y: 78, label: 'Mabel Kim' }
         ]
       }]
     });
     chart.render();
-    
+
   }
-  renderVacationChart() { 
+  renderVacationChart() {
 
     var chart = new CanvasJS.Chart("vacationContainer", {
       animationEnabled: true,
@@ -50,19 +49,19 @@ export class ReportsComponent implements OnInit {
       data: [{
         type: "line",
         dataPoints: [
-			{ y: 5, label: 'January' },
-			{ y: 1, label: 'Februray' },
-			{ y: 9, label: 'March', indexLabel: "highest",markerColor: "red", markerType: "triangle" },
-			{ y: 6, label: 'April'  },
-			{ y: 5 , label: 'May' },
-			{ y: 0, label: 'June'   , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross"  },
-			{ y: 8, label: 'July'  },
-			{ y: 8, label: 'August'  },
-			{ y: 1, label: 'September'},
-			{ y: 4, label: 'October'  },
-			{ y: 8, label: 'November'  },
-			{ y: 1, label: 'December'  }
-		]
+          { y: 5, label: 'January' },
+          { y: 1, label: 'Februray' },
+          { y: 9, label: 'March', indexLabel: "highest", markerColor: "red", markerType: "triangle" },
+          { y: 6, label: 'April' },
+          { y: 5, label: 'May' },
+          { y: 0, label: 'June', indexLabel: "lowest", markerColor: "DarkSlateGrey", markerType: "cross" },
+          { y: 8, label: 'July' },
+          { y: 8, label: 'August' },
+          { y: 1, label: 'September' },
+          { y: 4, label: 'October' },
+          { y: 8, label: 'November' },
+          { y: 1, label: 'December' }
+        ]
       }]
     });
     chart.render();

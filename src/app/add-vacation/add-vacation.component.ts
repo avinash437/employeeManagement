@@ -10,6 +10,8 @@ import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { UserService } from '../frameworks/authentication/user.service';
 import { UserDetails } from '../models/UserDetails';
+import { employeeModel } from '../view-employees/employeeModel';
+
 
 @Component({
   selector: 'app-add-vacation',
@@ -23,24 +25,28 @@ export class AddVacationComponent implements OnInit {
   userDetails = this.userService.getUserDetails();
 
   constructor(private formBuilder: FormBuilder, private addVacationModel: addVacationModel,
-    private router: Router, private userService: UserService) { }
+    private router: Router, private userService: UserService, private employeeModel: employeeModel) { }
   addVacation: addVacation;
   ngOnInit() {
-     
+    this.employeeModel.getEmployees('/employees');
+
     this.registerForm = this.formBuilder.group({
       name: [this.userDetails.name, Validators.required],
       from: ['', [Validators.required]],
       reason: ['', [Validators.required]],
       to: ['', [Validators.required]]
-    }/*, {
-      validator: MustMatch('password', 'confirmPassword')
-    }*/);
+    });
+
+
   }
-  // convenience getter for easy access to form fields
+
   get f() {
     return this.registerForm.controls;
   }
   onSubmit() {
+    
+    var element = document.getElementById('selectedEmployee') as HTMLSelectElement;
+    
     this.submitted = true;
 
     // stop here if form is invalid
@@ -49,7 +55,7 @@ export class AddVacationComponent implements OnInit {
     }
     console.log(this.registerForm);
     const addVacation1 = new addVacation();
-    addVacation1.username = this.userDetails.username;
+    addVacation1.username =  element.options[element.selectedIndex].value;
     addVacation1.from = this.registerForm.value.from;
     addVacation1.to = this.registerForm.value.to;
     addVacation1.name = this.registerForm.value.name;
