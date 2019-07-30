@@ -17,11 +17,13 @@ import { ViewEmployeesComponent } from './view-employees/view-employees.componen
 import { AddEmployeesComponent } from './add-employees/add-employees.component';
 import { UpdateEmployeesComponent } from './update-employees/update-employees.component';
 import {ReportsComponent} from './reports/reports.component';
+import { EmployeeFeedbacksComponent } from './employee-feedbacks/employee-feedbacks.component';
+import { EmployeeViewFeedbacksComponent } from './employee-view-feedbacks/employee-view-feedbacks.component';
 
 
 const routes: Routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
-    { path: 'dashboard', component: DashboardComponent, data: {animation: 'contact'}, canActivate:[LoginService,UserService]},
+    { path: 'dashboard', component: DashboardComponent, data: {animation: 'contact'}, canActivate:[LoginService]},
     { path: 'vacations', component: VacationsComponent, canActivate:[LoginService]},
     { path: 'planning', component: PlanningComponent, canActivate:[LoginService,UserService]},
     { path: 'addVacation', component: AddVacationComponent, canActivate:[LoginService,UserService]},
@@ -34,6 +36,8 @@ const routes: Routes = [
     { path: 'viewEmployee', component: ViewEmployeesComponent, canActivate:[LoginService,UserService]},
     { path: 'updateEmployee', component: UpdateEmployeesComponent, canActivate:[LoginService,UserService]},
     { path: 'reports', component: ReportsComponent, canActivate:[LoginService,UserService]},
+    { path: 'feedback', component: EmployeeFeedbacksComponent, canActivate:[LoginService,UserService]},
+    { path: 'addfeedback', component: EmployeeViewFeedbacksComponent, canActivate:[LoginService,UserService]},
     { path: 'login', component: LoginComponent},
 ];
 

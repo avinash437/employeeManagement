@@ -32,11 +32,7 @@ export class loginModel {
         sessionStorage.setItem('_isLoggedIn', JSON.stringify(true));
         let element = document.getElementById('mainController');
         element.style.display = 'block';
-        if(this.userService.getUserDetails().lead){
-          this.router.navigateByUrl('/dashboard'); 
-        }else{
-          this.router.navigateByUrl('/vacations');
-        }
+        this.router.navigateByUrl('/dashboard'); 
       }
     });
     this.restModelComponent.post(url, body,message);

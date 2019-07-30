@@ -24,4 +24,8 @@ export class LeadComponent implements OnInit {
     });
   }
 
+  loadProfile($event, lead){
+
+  }
+
 }

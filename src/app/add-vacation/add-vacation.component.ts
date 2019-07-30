@@ -25,7 +25,7 @@ export class AddVacationComponent implements OnInit {
   userDetails = this.userService.getUserDetails();
 
   constructor(private formBuilder: FormBuilder, private addVacationModel: addVacationModel,
-    private router: Router, private userService: UserService, private employeeModel: employeeModel) { }
+    private router: Router, private userService: UserService, public employeeModel: employeeModel) { }
   addVacation: addVacation;
   ngOnInit() {
     this.employeeModel.getEmployees('/employees');
@@ -46,6 +46,7 @@ export class AddVacationComponent implements OnInit {
   onSubmit() {
     
     var element = document.getElementById('selectedEmployee') as HTMLSelectElement;
+    var vacationType = document.getElementById('vacationType') as HTMLSelectElement;
     
     this.submitted = true;
 
@@ -60,6 +61,7 @@ export class AddVacationComponent implements OnInit {
     addVacation1.to = this.registerForm.value.to;
     addVacation1.name = this.registerForm.value.name;
     addVacation1.reason = this.registerForm.value.reason;
+    addVacation1.type = vacationType.options[vacationType.selectedIndex].value;
 
     this.addVacationModel.addEmployeeVacations('/employee/add/vacations', addVacation1, 'Failed to add vacation');
     this.router.navigateByUrl('/viewVacation');

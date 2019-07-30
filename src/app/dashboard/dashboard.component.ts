@@ -7,6 +7,7 @@ import { employeeModel } from './employeeModel';
 
 import { DataStateStore } from '../models/DataStateStore';
 import { Router } from '@angular/router';
+import {UserService} from '../frameworks/authentication/user.service';
 
 @Component({
     selector: 'app-dashboard',
@@ -16,7 +17,7 @@ import { Router } from '@angular/router';
 export class DashboardComponent implements OnInit {
 
     constructor(public dataStateStore: DataStateStore, private router: Router,
-        private employeeModel: employeeModel ) { }
+        private employeeModel: employeeModel, public userService: UserService ) { }
     employee: Employee[];
     selectedEmployee: Employee;
 

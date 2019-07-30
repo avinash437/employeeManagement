@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as CanvasJS from '../frameworks/canvasjs.min';
 
 @Component({
   selector: 'app-reports',

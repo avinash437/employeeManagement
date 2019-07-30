@@ -16,7 +16,6 @@ import { RestModelComponent } from './../Model/RestModel.component';
     providedIn: 'root'
 })
 export class CanjasJSComponent implements OnInit {
-    canvasJS;
     constructor(private restModelComponent: RestModelComponent) {
         
     }
@@ -24,6 +23,7 @@ export class CanjasJSComponent implements OnInit {
         
     }
     getcanvasJS(title, data, elementRef) {
+      /*
         return new CanvasJS.Chart(elementRef, {
             animationEnabled: true,
             data: [{
@@ -35,7 +35,7 @@ export class CanjasJSComponent implements OnInit {
               dataPoints: data
             }]
           });
-        
+        */
     }
 
 }

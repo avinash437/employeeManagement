@@ -11,5 +11,6 @@ export class Employee {
     experience: string;
     contact: string;
     parentId: string;
+    role: string;
     vacationList: Vacation[];
 }

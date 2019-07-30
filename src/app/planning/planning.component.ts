@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { planningModel } from './planningModel';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { Vacation } from '../models/vacation';
+import * as CanvasJS from '../frameworks/canvasjs.min';
+
 
 @Component({
   selector: 'app-planning',
@@ -28,7 +30,7 @@ export class PlanningComponent implements OnInit {
   sprintDays = [];
   constructor(private planningModel: planningModel) { }
   planning = <any>[];
-
+  
   currentState = 'hidden';
   scrumTeam
   changeState(index) {
@@ -59,7 +61,9 @@ export class PlanningComponent implements OnInit {
         toolTip = that.getNames(planning);
       }
       that.datapoints.push({ toolTipContent: toolTip, y: parseInt(planning.capacity),
-         label: 'Sprint - ' + planning.sprintNumber });
+         label: 'Sprint - ' + planning.sprintNumber + ' (' +
+          planning.sprintStartDate.toString().substring(0,planning.sprintStartDate.lastIndexOf('-')) + ' to ' 
+          + planning.sprintEndDate.toString().substring(0,planning.sprintEndDate.lastIndexOf('-')) + ')'  });
     });
     var chart = new CanvasJS.Chart("planningContainer", {
       animationEnabled: true,
@@ -69,11 +73,18 @@ export class PlanningComponent implements OnInit {
       },
       axisY: {
         title: "Capacity ",
-        includeZero: false
+        includeZero: false,
+        labelAutoFit: true,  // change to false
+        interval: 4
       },
+      axisX:{
+        labelMaxWidth: 90,  
+        labelWrap: true
+     },
+      axisYIndex: 0,
       mouseover: that.onMouseover,
       data: [{
-        type: "line",
+        type: "area",
         dataPoints: this.datapoints
       }]
     });
@@ -128,7 +139,7 @@ export class PlanningComponent implements OnInit {
     let response = '<div >';
     if (planning.vacationlist.length >0 ) {
         planning.vacationlist.forEach(vacation => {         
-          response += vacation.name+ ' is on vacation from <br />' + this.formatDate(vacation.from) +' - '+ this.formatDate(vacation.to) ;
+          response += vacation.name+ ' is on vacation from <br />' + this.formatDate(vacation.from) +' - '+ this.formatDate(vacation.to) + '<br />' ;
       });
       
     }

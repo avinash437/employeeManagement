@@ -22,7 +22,7 @@ export class EmployeeNotesComponent implements OnInit {
 
 
   constructor(private formBuilder: FormBuilder, private employeeNotesModel:
-    employeeNotesModel, private router: Router, private employeeModel: employeeModel) { }
+    employeeNotesModel, private router: Router, public employeeModel: employeeModel) { }
   
   employeeNote: employeeNote;
   ngOnInit() {

@@ -4,4 +4,5 @@ export class addVacation {
     name: string;
     username: string;
     reason: String;
+    type: String;
 }

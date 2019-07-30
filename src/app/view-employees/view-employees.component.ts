@@ -17,14 +17,25 @@ export class ViewEmployeesComponent implements OnInit {
 
  
   constructor(private http: HttpClient, public dataStateStore: DataStateStore, private router: Router,
-    private employeeModel: employeeModel ) { }
+    public employeeModel: employeeModel ) { }
 employee: Employee[];
 selectedEmployee: Employee;
 
-ngOnInit() {
-    this.employeeModel.getEmployees('/employees');
-}
+entities = [
+  { id: 1, name: 'Netanel Basal', isAdmin: true },
+  { id: 2, name: 'John Due', isAdmin: false },
+]
 
+ngOnInit() {
+   this.employeeModel.getEmployees('/employees');
+}
+tableHeaders = ['Header 1', 'Header 2', 'Header 3'];
+ 
+  tableRowsWithId = [
+    [1, 'Example', 'Example', true]
+  ];
+  dataType = ['string', 'string', 'boolean'];
+   
 getTeamInformation(): void {
 
 }

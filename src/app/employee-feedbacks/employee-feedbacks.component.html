@@ -1,0 +1,69 @@
+<div class="content">
+
+    <div class="row">
+        <div class="col-3">
+            <div class="teamname">Team member feedbacks</div>
+        </div>
+        <div class="col-1">
+            <a routerLink="/feedback" routerLinkActive="active">Add</a>
+        </div>
+        <div class="col-1">
+            <a routerLink="/addfeedback" routerLinkActive="active">View</a>
+        </div>
+        <br />
+    </div> <br />
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+        <div class="row">
+            <div class="col-1"><label>Name</label></div>
+
+            <div class="col-4">
+
+                <select id="selectedEmployee" class="form-control" ng-model="selectedEmployee">
+                    <option *ngFor="let employee of employeeModel.employee; index as index"
+                        value="{{employee.username}}">
+                        {{employee.name}}</option>
+                </select>
+            </div>
+
+        </div> <br />
+        <div class="row form-group">
+            <div class="col-1"><label>From: </label></div>
+            <div class="col-4"><input type="date" formControlName="from" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.from.errors }" />
+                <div *ngIf="submitted && f.from.errors" class="invalid-feedback">
+                    <div *ngIf="f.from.errors.required">This is required field</div>
+                </div>
+            </div>
+        </div><br />
+        <div class="row form-group">
+            <div class="col-1"><label>To: </label></div>
+            <div class="col-4"><input type="date" formControlName="to" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.to.errors }" />
+                <div *ngIf="submitted && f.to.errors" class="invalid-feedback">
+                    <div *ngIf="f.to.errors.required">This is required field</div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-1"><label>Feedback</label></div>
+            <div class="col-4">
+                <textarea type="text" rows="6" cols="60" formControlName="feedback"
+                    [ngClass]="{ 'is-invalid': submitted && f.feedback.errors }"></textarea>
+                <div *ngIf="submitted && f.feedback.errors" class="invalid-feedback">
+                    <div *ngIf="f.feedback.errors.required">This is required field</div>
+                </div>
+            </div>
+
+        </div>
+
+        <br />
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-4"><button class="custombtn ">Add</button></div>
+        </div>
+
+    </form>
+</div>

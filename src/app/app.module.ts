@@ -35,6 +35,9 @@ import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { CalendarCellComponent } from './calendar-cell/calendar-cell.component';
 import { TodoComponent } from './todo/todo.component';
 import { ReportsComponent } from './reports/reports.component';
+import { EmployeeFeedbacksComponent } from './employee-feedbacks/employee-feedbacks.component';
+import { EmployeeViewFeedbacksComponent } from './employee-view-feedbacks/employee-view-feedbacks.component';
+
 
 @NgModule({
     imports: [
@@ -71,7 +74,9 @@ import { ReportsComponent } from './reports/reports.component';
         AutocompleteComponent,
         CalendarCellComponent,
         TodoComponent,
-        ReportsComponent
+        ReportsComponent,
+        EmployeeFeedbacksComponent,
+        EmployeeViewFeedbacksComponent
     ],
     providers: [DataStateStore, UserService],
     bootstrap: [AppComponent]

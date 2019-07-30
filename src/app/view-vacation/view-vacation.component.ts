@@ -13,7 +13,7 @@ import { ModalService } from '../frameworks/utility/modal/modal.service';
 })
 export class ViewVacationComponent implements OnInit,AfterViewInit {
 
-    constructor(private viewVacationModel: viewVacationModel,private modalService: ModalService) { }
+    constructor(public viewVacationModel: viewVacationModel,private modalService: ModalService) { }
     vacationResponse: VacationResponse[];
     ngOnInit() {
         this.viewVacationModel.getVacationList('/employee/vacations');
